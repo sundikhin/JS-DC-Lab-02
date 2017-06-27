@@ -1,0 +1,178 @@
+/* FLEX CARD */
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+  color: white;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'helvetica', 'arial', sans-serif;
+	background: #202123;
+}
+
+h1 {
+	margin-bottom: .25em;
+}
+
+p {
+	line-height: 1.35em;
+}
+
+.wrapper {
+	max-width: 1024px;
+	margin: 2rem auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding-left: 1em;
+}
+
+.card {
+	flex-basis: 300px;
+	flex-grow: 1;
+	margin: 0 1em 1em 0;
+	overflow: hidden;
+	height: 15rem;
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 10px 35px -15px #000;
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position:20% 20%;
+	transition:all 10ms ease;
+}
+
+.text {
+	color: #fff;
+	padding: 1em;
+	position: absolute;
+	top: calc(100% - 4em);
+	transition: all 200ms ease;
+	width:100%;
+	height:100%;
+}
+
+.text:before {
+	content: '';
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+	position: absolute;
+	width: 100%;
+	height: 130%;
+	bottom: 0;
+	margin-left: -1em;
+}
+
+.text a {
+  color: white;
+}
+
+h1,
+p {
+	position: relative;
+}
+
+.card:hover .text {
+	top: 0;
+}
+
+.card:hover .text:before{
+	background:rgba(0,0,0,.5);
+}
+
+.card:hover .img{
+	filter:blur(5px);
+}
+
+/* */
+
+nav {
+  text-transform: uppercase;
+  font-size: .75em;
+  letter-spacing: .145em;
+  line-height: 30px;
+  padding: 8px;
+  transition: color 300ms;
+}
+
+nav a {
+  color: #fff;
+}
+
+.app-title {
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-block;
+  line-height: 35px;
+  margin: 8px;
+  padding: 0 15px;
+  font-size: 15px;
+  position: relative;
+  opacity: .999;
+  border-radius: 3px;
+  background-color: transparent;
+  border: 1px solid #d0d0d0;
+  color: #B8B8B8;
+}
+
+.btn:hover {
+  color: #9b59b6;
+  border: 1px solid #9b59b6;
+  transition-delay: 0.05s;
+  cursor: pointer;
+}
+
+.artist-card {
+  width: 300px;
+}
+
+.artist-card img {
+  border-radius: 100%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.show-artist {
+  color: white;
+}
+
+.show-artist .biography {
+  font-size: .75em;
+  line-height: 30px;
+  padding: 8px;
+}
+
+.show-artist img {
+  max-width: 250px;
+}
+
+/**
+ * Footer Styles
+ */
+
+footer {
+  text-transform: uppercase;
+  font-size: .75em;
+  padding: 1rem;
+  text-align: center;
+}
+

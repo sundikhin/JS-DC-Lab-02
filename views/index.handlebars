@@ -1,0 +1,15 @@
+<h1 class="app-title">Tunr</h1>
+
+<div>
+  {{#each artists}}
+    <div class="wrapper">
+      <div class="card">
+        <div class="img" style="background-image:url('{{ image }}');"></div>
+        <div class="text">
+          <h1><a href="/artists/{{ _id }}">{{ name }}</a></h1>
+          <p>{{ genre }}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

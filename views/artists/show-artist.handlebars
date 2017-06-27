@@ -1,0 +1,51 @@
+<div class="show-artist">
+  <h2>{{ name }}</h2>
+
+  <div>
+    <img src="{{ image }}" alt="{{ name }}">
+  </div>
+
+  <p class="biography">
+    {{ bio }}
+  </p>
+
+  <p>
+    <a href="{{ website }}">{{ name }} Website</a>
+  </p>
+
+  <div>
+    <a href="/artists/edit-artist/{{ id }}">Edit</a>
+  </div>
+
+  <form action="/artists/remove/{{id}}" method="POST">
+    <button type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+  </form>
+
+  <div class="comments">
+    <h5>Comments: </h5>
+    {{#each artist.comments }}
+      <div class="comment">
+        <p>
+          {{ comment }}
+        </p>
+        <span>{{ author }}</span>
+      </div>
+    {{/each}}
+  </div>
+
+  <div class="new-comment">
+    <h5>New Comment:</h5>
+    <form action="/artists/{{ id }}" method="post">
+      <p>
+        <label for="author">Author</label>
+        <input type="text" name="author" value="">
+      </p>
+      <p>
+        <label for="comment">Comment</label>
+        <textarea name="comment" rows="8" cols="80"></textarea>
+      </p>
+      <button class="btn" type="submit" name="submit">Submit</button>
+    </form>
+  </div>
+
+</div>
